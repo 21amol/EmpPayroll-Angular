@@ -78,7 +78,8 @@
         <div class="buttonParent">
             <button class="resetButton button cancelButton" (click)="onCancel()">Cancel</button>
             <div class="submit-reset">
-                <button type="submit" class="button submitButton" id="submitButton" (click)="onSubmit(inputform)">Submit</button>
+                <button type="submit" class="button submitButton" id="submitButton" *ngIf = "employeeID == null" (click)="onSubmit(inputform)">Submit</button>
+                <button type="submit" class="button submitButton" id="submitButton" *ngIf = "employeeID != null" (click)="updateEmployee()">Upadte</button>
                 <button type="reset" class="resetButton button">Reset</button>
             </div>
         </div>

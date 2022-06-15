@@ -18,7 +18,24 @@ export class DashboardComponent implements OnInit {
       });
       console.log(this.employee);
   }
+
+  // It will navigate the user to form, when he clicks add button...
 onAddUser(){
   this.router.navigate(["form"]);
 }
+
+//Delete call from service...
+deleteEmployee(employeeID:number) {
+  console.log(employeeID);
+  this.service.deleteEmployee(employeeID).subscribe((data) => { console.log("Data Deleted!!!");
+  this.ngOnInit();
+//  this.router.navigate(["dashboard"])
+});
+ }
+ 
+ // Updating call from service...
+updateEmployee(employeeID:number) {
+this.router.navigate(["update", employeeID]);
+ }
+
 }

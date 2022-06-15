@@ -19,5 +19,15 @@ getEmployee() {
   return this.http.get("http://localhost:8080/employeepayroll/get")
 }
 
+// Deleting Employee Data...
+deleteEmployee(employeeID:number) {
+  return this.http.delete("http://localhost:8080/employeepayroll/remove/" + employeeID)
+ }
+
+ // Updating Employee Data...
+updateEmployee(employeeID:number, employee: any) {
+  return this.http.put("http://localhost:8080/employeepayroll/edit/" + employeeID, employee)
+ }
+
 }
 

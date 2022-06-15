@@ -2,9 +2,9 @@ export class EmployeeModel {
 
     employeeID: number =1;  
 	name: string = "";
-  salary: number = 30000;
+    salary: number = 30000;
 	gender: string = "";
-  joiningdate: Date;
+    joiningdate: Date;
 	note: string = "";
 	profilePic: string = "";
   department: string = "";

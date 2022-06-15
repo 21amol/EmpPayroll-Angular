@@ -30,12 +30,13 @@
 			<td>{{emp.joiningdate}}</td>
 			<td>{{emp.note}}</td>
 			<td>{{emp.department}}</td>
-			<!-- <td>
-				<img [src]="./assets/create.svg">
-				<img [src]="./assets/delete.svg">
-			</td>  -->
-		</tr> 
+		    <td>
+			    <img src="./assets/create.svg" (click)="updateEmployee(emp.employeeID)">
+		
+				<img src="./assets/delete.svg" (click)="deleteEmployee(emp.employeeID)">
+			</td> 
 
+		</tr> 
 	 </table>
 	</div>
 </div>

@@ -11,6 +11,7 @@ import { EmployeeService } from '../employee.service';
 })
 export class FormComponent implements OnInit {
 
+  employeeID: any = this.route.snapshot.paramMap.get("employeeID");
   
   constructor(private router:Router, private service: EmployeeService, private route: ActivatedRoute) { }
   employee: EmployeeModel = new EmployeeModel(0," ",0,"",new Date,"","","");
@@ -32,5 +33,10 @@ export class FormComponent implements OnInit {
     console.log(value);
     this.employee.department=value.toString();
   }
- 
+  
+  updateEmployee() {
+    this.service.updateEmployee(this.employeeID, this.employee).subscribe((data:any) => 
+    {this.router.navigate(["dashboard"])});
+  }
+  
 }
