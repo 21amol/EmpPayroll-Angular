@@ -17,6 +17,10 @@ export class FormComponent implements OnInit {
   employee: EmployeeModel = new EmployeeModel(0," ",0,"",new Date,"","","");
 
   ngOnInit(): void {
+    this.service.getEmployeeByID(this.employeeID).subscribe((getData:any)=>{
+      console.log(getData.data);
+      this.employee=getData.data;
+    })
   }
 
   onCancel(){

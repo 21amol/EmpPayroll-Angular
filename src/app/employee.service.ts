@@ -29,5 +29,10 @@ updateEmployee(employeeID:number, employee: any) {
   return this.http.put("http://localhost:8080/employeepayroll/edit/" + employeeID, employee)
  }
 
+// Getting details By ID...
+getEmployeeByID(employeeID:number){
+  return this.http.get("http://localhost:8080/employeepayroll/get/"+employeeID);
+ }
+  
 }
 

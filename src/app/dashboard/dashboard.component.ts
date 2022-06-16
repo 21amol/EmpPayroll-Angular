@@ -13,8 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor(private router:Router, private service:EmployeeService) { }
 
   ngOnInit(): void {
-    this.service.getEmployee().subscribe((data:any)=>{
-      this.employee=data.data;
+    this.service.getEmployee().subscribe((getData:any)=>{
+      this.employee=getData.data;
       });
       console.log(this.employee);
   }
@@ -29,13 +29,14 @@ deleteEmployee(employeeID:number) {
   console.log(employeeID);
   this.service.deleteEmployee(employeeID).subscribe((data) => { console.log("Data Deleted!!!");
   this.ngOnInit();
-//  this.router.navigate(["dashboard"])
+//  this.router.navigate(["dashboard"])     not required as we are using OnInit method on line 31...
 });
  }
  
- // Updating call from service...
+ // Update call from service...
 updateEmployee(employeeID:number) {
 this.router.navigate(["update", employeeID]);
  }
+
 
 }

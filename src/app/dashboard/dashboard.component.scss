@@ -21,6 +21,17 @@
     color:#42515f; 
     opacity: 1; 
   }
+  
+  .emp-count {
+    background-color: #82a70c;
+    color: #ffffff;
+    border-radius: 42%;
+    font-size: 20px;
+    width: 26px;
+    text-align: center;
+    display: inline-block;
+    margin: 10px;
+  }
 
   .add-button { 
     font: normal normal normal 22px/29px Arial; 
@@ -34,6 +45,7 @@
     outline: none; 
     cursor: pointer; 
     text-decoration: none;
+    margin-left: 750px;
   }
 
   .table-main { 
